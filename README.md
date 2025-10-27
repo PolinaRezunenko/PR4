@@ -1,3 +1,36 @@
+# Практическая работа №4 - Тестирование механизма управления доступом и сессиями
+
+## Установка и запуск проекта
+
+### Требования:
+- PHP 8.1+
+- Composer
+- Node.js 16+
+- MySQL/PostgreSQL
+
+## Шаги установки:
+
+### 1. Установить зависимости PHP:
+composer install
+
+### 2. Настроить окружение:
+cp .env.example .env
+php artisan key:generate
+
+
+### 3. Выполнить миграции:
+php artisan migrate
+
+### 4. Установить и собрать фронтенд:
+npm install && npm run dev
+
+### 5. Заполнить базу тестовыми данными:
+php artisan db:seed --class=AdminUserSeeder
+php artisan db:seed --class=DemoDataSeeder
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
